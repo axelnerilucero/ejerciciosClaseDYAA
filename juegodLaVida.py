@@ -64,7 +64,7 @@ class matriz:
                 print("")
 
             print("\n")
-            count +=1
+            count = count + 1
         print("ya acabo las "+ str(generaciones))
 
 
