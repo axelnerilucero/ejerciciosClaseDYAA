@@ -11,7 +11,7 @@ def calcular(numero):
     print(suma)
 calcular(3)
 """
-
+"""
 def listan1er(lista):
     lista2 = lista.copy()
     combinaciones = [(x,y) for x in lista for y in lista2]
@@ -33,3 +33,14 @@ def listan2do(lista):
 
 a = [1,2,3]
 tab = listan2do(a)
+"""
+def listan1(lista):
+    lista2 = lista.copy()
+    combinaciones = [(x,y) for x in lista for y in lista2]
+    print("Entrada: "+str(lista))
+    for elem in combinaciones:
+        print(elem)
+    print("Final: "+str(len(combinaciones)))
+
+a = [1,2,3]
+tab = listan(a)
