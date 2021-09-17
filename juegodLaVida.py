@@ -1,3 +1,4 @@
+
 class matriz:
     viva = 1
     muerta = 0
@@ -48,30 +49,40 @@ class matriz:
                     vecinos = self.getItem(r,c+1) + self.getItem(r,c-1) + self.getItem(r-1,c) \
                             + self.getItem(r+1,c) + self.getItem(r-1,c-1) + self.getItem(r+1,c-1) \
                             + self.getItem(r-1,c+1) + self.getItem(r+1,c+1)
+                    if self.getItem(r,c) == 1 and vecinos == 2:
+                        self.setItem(r, c, self.viva)
 
-                    if self.getItem(r,c) == 1 and (vecinos == 2 or vecinos == 3):
-                        print(" 1 ", end="")
-                    elif self.getItem(r,c) == 1 and (vecinos == 0 or vecinos == 1):
-                        print(" 0 ", end="")
+                    elif self.getItem(r,c) == 1 and vecinos == 3:
+                        self.setItem(r, c, self.viva)
+
+                    elif self.getItem(r,c) == 1 and vecinos == 0:
+                        self.setItem(r, c, self.muerta)
+
+                    elif self.getItem(r,c) == 1 and vecinos == 1:
+                        self.setItem(r, c, self.muerta)
+
                     elif self.getItem(r,c) == 1 and vecinos >= 4:
-                        print(" 0 ", end="")
+                        self.setItem(r, c, self.muerta)
+
                     elif self.getItem(r,c) == 0 and vecinos == 3:
-                        print(" 1 ", end="")
+                        self.setItem(r, c, self.viva)
+
                     elif self.getItem(r,c) == 0 and vecinos < 3:
-                            print(" 0 ", end="")
+                        self.setItem(r, c, self.muerta)
 
 
-                print("")
 
+
+            self.tablero()
             print("\n")
-            count +=1
+            count = count + 1
         print("ya acabo las "+ str(generaciones))
 
 
 tab = matriz(6,5,0)
 tab.tablero()
 print("-----------------------")
-tab.generacion1([(4,2),(4,3),(4,4),(3,3)])
-#tab.tablero()
+tab.generacion1([(3,2),(3,3),(3,4),(4,2),(4,4),(5,2),(5,3),(5,4)])
+tab.tablero()
 print("\n")
-tab.ejecucion(3)
+tab.ejecucion(10)
