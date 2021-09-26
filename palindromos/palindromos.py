@@ -25,9 +25,12 @@ def reloj():
 
 def palindromo():
     reloj()
+    conteo = 0
     for e in franja:
         if e == e[::-1]:
             print(str(e)+" Es palindromo")
+            conteo += 1
 
+    print(f"Hay {conteo} palindromos")
 
 palindromo()
