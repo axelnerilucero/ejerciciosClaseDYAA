@@ -93,7 +93,7 @@ def calcular_monto():
             print(f"Tienes {int(cincuenta)} monedas de cincuenta centavos")
         count +=1
         print("\n\n")
-    #print("Ingresa un numero valido")
+
 
 
 def menu():
