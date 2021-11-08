@@ -34,7 +34,8 @@ def listan2do(lista):
 a = [1,2,3]
 tab = listan2do(a)
 """
-def listan1(lista):
+
+def listan(lista):
     lista2 = lista.copy()
     combinaciones = [(x,y) for x in lista for y in lista2]
     print("Entrada: "+str(lista))
