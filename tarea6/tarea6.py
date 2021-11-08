@@ -112,10 +112,6 @@ class arbolBB:
           self.eliminar_nodo(None, actual, actual.right, value)
 
 
-
-
-
-
 abb = arbolBB()
 
 abb.insert(6)
@@ -126,7 +122,10 @@ abb.insert(5)
 abb.insert(7)
 abb.insert(10)
 abb.transversal("preorden")
+print("antes de eliminar")
 abb.eliminar(3)
 abb.transversal("preorden")
+print("con el numero eliminado")
 abb.insert(3)
+print("agregando el mismo numero y se acomoda en una posicion diferente")
 abb.transversal("preorden")
